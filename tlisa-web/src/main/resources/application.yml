@@ -1,0 +1,39 @@
+#server:
+#  port: 9000
+#
+##  定义对象/Map集合
+#user:
+#  name: Tom
+#  age: 15
+#  address: BeiJing
+#
+##定义数组/List/Set
+#hobby:
+#  - music
+#  - game
+#  - sport
+#  - dance
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3307/tlisa
+    username: root
+    password: 123456
+
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
+
+mybatis:
+  mapper-locations: classpath:mappers/*xml
+  type-aliases-package: com.example.mybatis.entity
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+
+#spring事务日志管理
+logging:
+  level:
+    org.springframework.jdbc.support.JdbcTransactionManager: debug

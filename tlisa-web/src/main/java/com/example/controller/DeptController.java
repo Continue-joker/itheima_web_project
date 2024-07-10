@@ -1,5 +1,6 @@
 package com.example.controller;
 
+import com.example.anno.Log;
 import com.example.pojo.Dept;
 import com.example.pojo.Result;
 import com.example.service.DeptService;
@@ -43,6 +44,7 @@ public class DeptController {
      * @param id
      * @return
      */
+    @Log
     @DeleteMapping("/{id}")
     public Result delete(@PathVariable Integer id){
         log.info("根据id删除部门：{}",id);//{}是id的占位符
@@ -55,6 +57,7 @@ public class DeptController {
      * @param dept
      * @return
      */
+    @Log
     @PostMapping
     public Result add(@RequestBody Dept dept){
         log.info("添加部门：{}",dept.getName());
@@ -75,6 +78,12 @@ public class DeptController {
         return Result.success(dept);
     }
 
+    /**
+     * 更新部门信息
+     * @param dept
+     * @return
+     */
+    @Log
     @PutMapping
     public Result update(@RequestBody Dept dept){
         deptService.update(dept);

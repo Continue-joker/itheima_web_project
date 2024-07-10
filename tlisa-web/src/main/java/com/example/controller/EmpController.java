@@ -1,5 +1,6 @@
 package com.example.controller;
 
+import com.example.anno.Log;
 import com.example.pojo.Emp;
 import com.example.pojo.PageBean;
 import com.example.pojo.Result;
@@ -39,6 +40,7 @@ public class EmpController {
         return Result.success(pageBean);
     }
 
+    @Log
     @DeleteMapping("/{ids}")
     public Result delte(@PathVariable List<Integer> ids){
         log.info("批量删除，ids:{}",ids);
@@ -46,6 +48,7 @@ public class EmpController {
         return Result.success();
     }
 
+    @Log
     @PostMapping
     public Result add(@RequestBody Emp emp, HttpSession session){
         emp.setImage(session.getAttribute("image").toString());
@@ -72,6 +75,7 @@ public class EmpController {
      * @param emp
      * @return
      */
+    @Log
     @PutMapping
     public Result update(@RequestBody Emp emp){
         log.info("待修改的员工信息：{}",emp);

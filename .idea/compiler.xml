@@ -9,6 +9,7 @@
         <module name="springboot-aop-quickstart" />
         <module name="tlias-web-management" />
         <module name="spring-studyMybatis-quickstart" />
+        <module name="springboot-web-config2" />
         <module name="tlisa-web" />
       </profile>
     </annotationProcessing>
@@ -17,6 +18,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="springboot-aop-quickstart" options="-parameters" />
+      <module name="springboot-web-config2" options="-parameters" />
       <module name="tlias-web-management" options="-parameters" />
     </option>
   </component>

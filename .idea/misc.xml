@@ -11,6 +11,8 @@
         <option value="$PROJECT_DIR$/springboot-aop-quickstart/pom.xml" />
         <option value="$PROJECT_DIR$/tlias-web-management/pom.xml" />
         <option value="$PROJECT_DIR$/springboot-web-config2/pom.xml" />
+        <option value="$PROJECT_DIR$/aliyun-oss-spring-boot-starter/pom.xml" />
+        <option value="$PROJECT_DIR$/aliyun-oss-spring-boot-autoconfigure/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

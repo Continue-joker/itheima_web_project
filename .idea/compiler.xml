@@ -8,7 +8,9 @@
         <outputRelativeToContentRoot value="true" />
         <module name="springboot-aop-quickstart" />
         <module name="tlias-web-management" />
+        <module name="aliyun-oss-spring-boot-starter" />
         <module name="spring-studyMybatis-quickstart" />
+        <module name="aliyun-oss-spring-boot-autoconfigure" />
         <module name="springboot-web-config2" />
         <module name="tlisa-web" />
       </profile>
@@ -17,6 +19,8 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="aliyun-oss-spring-boot-autoconfigure" options="-parameters" />
+      <module name="aliyun-oss-spring-boot-starter" options="-parameters" />
       <module name="springboot-aop-quickstart" options="-parameters" />
       <module name="springboot-web-config2" options="-parameters" />
       <module name="tlias-web-management" options="-parameters" />
